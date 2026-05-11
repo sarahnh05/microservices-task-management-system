@@ -34,7 +34,7 @@ Backend Task Management System built with a microservices architecture using Nod
 
 ## ERD Diagram
 
-```
+```mermaid
 erDiagram
     USERS {
         uuid id PK
