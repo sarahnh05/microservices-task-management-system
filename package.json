@@ -1,0 +1,21 @@
+{
+  "name": "microservices-todo-app",
+  "version": "1.0.0",
+  "description": "Backend Task Management System built with a microservices architecture using Node.js, Express, PostgreSQL, and RabbitMQ.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahnh05/microservices-todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sarahnh05/microservices-todo-app/issues"
+  },
+  "homepage": "https://github.com/sarahnh05/microservices-todo-app#readme"
+}
