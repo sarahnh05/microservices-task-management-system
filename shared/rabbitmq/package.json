@@ -1,19 +1,16 @@
 {
-  "name": "rabbitmq",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@sarah_org/common",
+  "version": "1.0.2",
+  "description": "Shared rabbitmq client for microservices",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "amqplib": "^2.0.1"
-  },
-  "devDependencies": {
-    "@types/amqplib": "^0.10.8"
   }
 }
