@@ -24,14 +24,14 @@ Backend Task Management System built with a microservices architecture using Nod
 
 ## Flow Overview
 
-# Request Flow
+### Request Flow
 
 - User Register -> Save to database
 - User Login -> Response with token
 - Create Task -> Save to database
 - Task created notification received on email
 
-# Event Flow
+### Event Flow
 
 - Task Service -> task.created event -> Event Bus -> Notification Service -> Send Email
 
