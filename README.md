@@ -2,16 +2,6 @@
 
 Backend Task Management System built with a microservices architecture using Node.js, Express, PostgreSQL, and RabbitMQ.
 
-## Tech Stack
-
-- Node.js
-- Express.js
-- PostgreSQL (raw SQL)
-- RabbitMQ
-- JWT Authentication
-- Microservices Architecture
-- Event-Driven Communication
-
 ## Features
 
 ### Authentication
@@ -22,7 +12,7 @@ Backend Task Management System built with a microservices architecture using Nod
 - Password hashing
 - Validation handling
 
-### Todo
+### Task
 
 - Create task
 - Get all tasks
@@ -31,6 +21,29 @@ Backend Task Management System built with a microservices architecture using Nod
 - Delete task
 - Filter by category
 - Search feature
+
+## Flow Overview
+
+# Request Flow
+
+- User Register -> Save to database
+- User Login -> Response with token
+- Create Task -> Save to database
+- Task created notification received on email
+
+# Event Flow
+
+- Task Service -> task.created event -> Event Bus -> Notification Service -> Send Email
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- PostgreSQL (raw SQL)
+- RabbitMQ
+- JWT Authentication
+- Microservices Architecture
+- Event-Driven Communication
 
 ## ERD Diagram
 
@@ -45,7 +58,7 @@ erDiagram
         timestamp updated_at
     }
 
-    TODOS {
+    TASKS {
         uuid id PK
         uuid user_id FK
         varchar title
@@ -57,7 +70,7 @@ erDiagram
         timestamp deleted_at
     }
 
-    USERS ||--o{ TODOS : has
+    USERS ||--o{ TASKS : has
 ```
 
 ## API Endpoints
@@ -85,6 +98,27 @@ This project was built to deepen understanding of:
 - Raw PostgreSQL queries
 - Backend scalability concepts
 - Service separation & communication
+
+## Testing
+
+Tested manually using Postman
+
+### Register
+
+![Register](./assets/register.PNG)
+
+### Login
+
+![Login](./assets/login.PNG)
+
+### Create
+
+![Create](./assets/create.PNG)
+
+### Email
+
+![Email](./assets/email.PNG)
+![Email](./assets/email1.PNG)
 
 ## Author
 
